@@ -33,7 +33,7 @@ class Post extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return '{{post}}';
+		return 'tbl_post';
 	}
 
 	/**

@@ -5065,3 +5065,106 @@ Stack trace:
 REQUEST_URI=/yiicms/css/PartnerBank.css
 HTTP_REFERER=http://localhost/yiicms/PartnerBank/PartnerBank
 ---
+2014/03/10 15:50:45 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'facedev_yiierp.post' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `post`.
+2014/03/10 15:50:45 [error] [exception.CDbException] exception 'CDbException' with message 'The table "{{post}}" for active record class "Post" cannot be found in the database.' in D:\wamp\www\yiicms\framework\db\ar\CActiveRecord.php:2362
+Stack trace:
+#0 D:\wamp\www\yiicms\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Post))
+#1 D:\wamp\www\yiicms\framework\db\ar\CActiveRecord.php(658): CActiveRecord->getMetaData()
+#2 D:\wamp\www\yiicms\framework\db\ar\CActiveRecord.php(1601): CActiveRecord->getTableSchema()
+#3 D:\wamp\www\yiicms\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#4 D:\wamp\www\yiicms\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#5 D:\wamp\www\yiicms\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#6 D:\wamp\www\yiicms\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 D:\wamp\www\yiicms\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#8 D:\wamp\www\yiicms\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#9 D:\wamp\www\yiicms\framework\web\CBaseController.php(147): CListView->init()
+#10 D:\wamp\www\yiicms\framework\web\CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#11 D:\wamp\www\yiicms\protected\views\post\index.php(17): CBaseController->widget('bootstrap.widge...', Array)
+#12 D:\wamp\www\yiicms\framework\web\CBaseController.php(126): require('D:\wamp\www\yii...')
+#13 D:\wamp\www\yiicms\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\yii...', Array, true)
+#14 D:\wamp\www\yiicms\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\yii...', Array, true)
+#15 D:\wamp\www\yiicms\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#16 D:\wamp\www\yiicms\protected\controllers\PostController.php(112): CController->render('index', Array)
+#17 D:\wamp\www\yiicms\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#18 D:\wamp\www\yiicms\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 D:\wamp\www\yiicms\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 D:\wamp\www\yiicms\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 D:\wamp\www\yiicms\protected\modules\rights\components\RController.php(36): CFilter->filter(Object(CFilterChain))
+#22 D:\wamp\www\yiicms\framework\web\filters\CInlineFilter.php(58): RController->filterRights(Object(CFilterChain))
+#23 D:\wamp\www\yiicms\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 D:\wamp\www\yiicms\framework\web\CController.php(291): CFilterChain->run()
+#25 D:\wamp\www\yiicms\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 D:\wamp\www\yiicms\framework\web\CWebApplication.php(282): CController->run('')
+#27 D:\wamp\www\yiicms\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#28 D:\wamp\www\yiicms\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#29 D:\wamp\www\yiicms\index.php(11): CApplication->run()
+#30 {main}
+REQUEST_URI=/yiicms/
+---
+2014/03/10 15:51:43 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'facedev_yiierp.comment' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `comment`.
+2014/03/10 15:51:43 [error] [exception.CDbException] exception 'CDbException' with message 'The table "{{comment}}" for active record class "Comment" cannot be found in the database.' in D:\wamp\www\yiicms\framework\db\ar\CActiveRecord.php:2362
+Stack trace:
+#0 D:\wamp\www\yiicms\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Comment))
+#1 D:\wamp\www\yiicms\framework\db\ar\CActiveRecord.php(138): CActiveRecord->getMetaData()
+#2 D:\wamp\www\yiicms\protected\components\views\userMenu.php(4): CActiveRecord->__get('pendingCommentC...')
+#3 D:\wamp\www\yiicms\framework\web\CBaseController.php(130): require('D:\wamp\www\yii...')
+#4 D:\wamp\www\yiicms\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\yii...', NULL, false)
+#5 D:\wamp\www\yiicms\framework\web\widgets\CWidget.php(244): CBaseController->renderFile('D:\wamp\www\yii...', NULL, false)
+#6 D:\wamp\www\yiicms\protected\components\UserMenu.php(15): CWidget->render('userMenu')
+#7 D:\wamp\www\yiicms\framework\zii\widgets\CPortlet.php(97): UserMenu->renderContent()
+#8 D:\wamp\www\yiicms\framework\web\CBaseController.php(173): CPortlet->run()
+#9 D:\wamp\www\yiicms\protected\views\layouts\column2.php(10): CBaseController->widget('UserMenu')
+#10 D:\wamp\www\yiicms\framework\web\CBaseController.php(126): require('D:\wamp\www\yii...')
+#11 D:\wamp\www\yiicms\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\yii...', Array, true)
+#12 D:\wamp\www\yiicms\framework\web\CController.php(784): CBaseController->renderFile('D:\wamp\www\yii...', Array, true)
+#13 D:\wamp\www\yiicms\protected\modules\user\controllers\DefaultController.php(22): CController->render('/user/index', Array)
+#14 D:\wamp\www\yiicms\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#15 D:\wamp\www\yiicms\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 D:\wamp\www\yiicms\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#17 D:\wamp\www\yiicms\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 D:\wamp\www\yiicms\framework\web\CWebApplication.php(282): CController->run('')
+#19 D:\wamp\www\yiicms\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#20 D:\wamp\www\yiicms\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 D:\wamp\www\yiicms\index.php(11): CApplication->run()
+#22 {main}
+REQUEST_URI=/yiicms/
+---
+2014/03/10 15:52:06 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'facedev_yiierp.AuthAssignment' doesn't exist. The SQL statement executed was: SELECT * FROM AuthAssignment WHERE itemname=:itemname.
+2014/03/10 15:52:06 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'facedev_yiierp.AuthAssignment' doesn't exist. The SQL statement executed was: SELECT * FROM AuthAssignment WHERE itemname=:itemname' in D:\wamp\www\yiicms\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\wamp\www\yiicms\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\wamp\www\yiicms\protected\modules\rights\components\RDbAuthManager.php(247): CDbCommand->queryAll('SELECT * FROM A...')
+#2 D:\wamp\www\yiicms\protected\modules\rights\components\RAuthorizer.php(285): RDbAuthManager->getAssignmentsByItemName('Admin')
+#3 D:\wamp\www\yiicms\protected\modules\rights\controllers\AssignmentController.php(51): RAuthorizer->getSuperusers()
+#4 D:\wamp\www\yiicms\framework\web\CController.php(1144): AssignmentController->accessRules()
+#5 D:\wamp\www\yiicms\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 D:\wamp\www\yiicms\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 D:\wamp\www\yiicms\framework\web\CController.php(291): CFilterChain->run()
+#8 D:\wamp\www\yiicms\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\wamp\www\yiicms\framework\web\CWebApplication.php(282): CController->run('')
+#10 D:\wamp\www\yiicms\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#11 D:\wamp\www\yiicms\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 D:\wamp\www\yiicms\index.php(11): CApplication->run()
+#13 {main}
+REQUEST_URI=/yiicms/
+---
+2014/03/10 15:53:51 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'facedev_yiierp.AuthAssignment' doesn't exist. The SQL statement executed was: SELECT * FROM AuthAssignment WHERE itemname=:itemname.
+2014/03/10 15:53:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'facedev_yiierp.AuthAssignment' doesn't exist. The SQL statement executed was: SELECT * FROM AuthAssignment WHERE itemname=:itemname' in D:\wamp\www\yiicms\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\wamp\www\yiicms\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\wamp\www\yiicms\protected\modules\rights\components\RDbAuthManager.php(247): CDbCommand->queryAll('SELECT * FROM A...')
+#2 D:\wamp\www\yiicms\protected\modules\rights\components\RAuthorizer.php(285): RDbAuthManager->getAssignmentsByItemName('Admin')
+#3 D:\wamp\www\yiicms\protected\modules\rights\controllers\AssignmentController.php(51): RAuthorizer->getSuperusers()
+#4 D:\wamp\www\yiicms\framework\web\CController.php(1144): AssignmentController->accessRules()
+#5 D:\wamp\www\yiicms\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 D:\wamp\www\yiicms\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 D:\wamp\www\yiicms\framework\web\CController.php(291): CFilterChain->run()
+#8 D:\wamp\www\yiicms\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\wamp\www\yiicms\framework\web\CWebApplication.php(282): CController->run('')
+#10 D:\wamp\www\yiicms\framework\web\CWebApplication.php(141): CWebApplication->runController('rights')
+#11 D:\wamp\www\yiicms\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 D:\wamp\www\yiicms\index.php(11): CApplication->run()
+#13 {main}
+REQUEST_URI=/yiicms/rights
+HTTP_REFERER=http://localhost/yiicms/
+---

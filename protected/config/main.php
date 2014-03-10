@@ -70,10 +70,10 @@ return array(
 		// uncomment the following to use a MySQL database
 		
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=yiicms',
+			'connectionString' => 'mysql:host=112.213.91.104;dbname=facedev_yiierp',
 			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '',
+			'username' => 'facedev_yiierp',
+			'password' => 'l6MZJXljxsH',
 			'charset' => 'utf8',
 			'tablePrefix' => '', 
 		),
